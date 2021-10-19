@@ -15,7 +15,7 @@ public class HomeWorkApp {
     }
 
     private static void printPositiveOrNegative(int digit) {
-        if( digit >= 0 ){
+        if(digit >= 0){
             System.out.println("Число положительное");
         }else{
             System.out.println("Число отрицательное");
@@ -35,9 +35,9 @@ public class HomeWorkApp {
     private static boolean isLeapYear(int year) {
         if(year % 400 == 0){
             return true;
-        }else if( year % 100 == 0 ){
+        }else if(year % 100 == 0){
             return false;
-        }else if( year % 4 == 0 ){
+        }else if(year % 4 == 0){
             return true;
         }else{
             return false;
