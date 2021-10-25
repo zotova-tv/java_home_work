@@ -56,7 +56,7 @@ public class HomeWorkApp {
         if (rangeFrom > rangeTo) {
             return new int[]{};
         }
-        int[] arr = new int[rangeTo];
+        int[] arr = new int[rangeTo - rangeFrom + 1];
         for (int i = 0, j = rangeFrom; i < arr.length; i++, j++) {
             arr[i] = j;
         }
