@@ -31,7 +31,7 @@ public class HomeWorkApp {
 
         // task 7
         int[] arr3 = {1, 1, 1, 2, 3, 2};
-        sumOfLeftSideEqualSumOfRightSide(arr3);
+        sumOfLeftSideIsEqualSumOfRightSide(arr3);
 
         // task 8
         int[] arr4 = {1, 2, 3};
@@ -133,7 +133,7 @@ public class HomeWorkApp {
     }
 
     // task 7
-    private static boolean sumOfLeftSideEqualSumOfRightSide(int[] arr) {
+    private static boolean sumOfLeftSideIsEqualSumOfRightSide(int[] arr) {
         if (arr.length < 2) {
             return false;
         }
