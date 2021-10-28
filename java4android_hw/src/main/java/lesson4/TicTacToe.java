@@ -97,7 +97,7 @@ public class TicTacToe {
                 break;
             }
         }
-        // слудующий ход
+        // следующий ход
     }
 
     private static boolean checkEnd(char symbol) {
@@ -188,9 +188,8 @@ public class TicTacToe {
             diagonalPointRow--;
             diagonalPointColumn--;
         }
-        // отбрасываем диагонали, где заведомо меньше клеток, чем количество символов, необходимое для победы
+        // отбрасываю диагонали, где заведомо меньше клеток, чем количество символов, необходимое для победы
         if(SIZE - diagonalPointRow + diagonalPointColumn < symbolsCountForWin){
-            System.out.println("Победа не уместилась");
             return false;
         }
         // считаю символы игрока, пока не приду в нижнюю точку диагонали
@@ -218,9 +217,8 @@ public class TicTacToe {
             diagonalPointRow--;
             diagonalPointColumn++;
         }
-        // отбрасываем диагонали, где заведомо меньше клеток, чем количество символов, необходимое для победы
+        // отбрасываю диагонали, где заведомо меньше клеток, чем количество символов, необходимое для победы
         if((diagonalPointRow == 0 && diagonalPointColumn + 1 < symbolsCountForWin) || (diagonalPointColumn == SIZE - 1 && SIZE - diagonalPointRow < symbolsCountForWin)){
-            System.out.println("Победа не уместилась");
             return false;
         }
         // считаю символы игрока, пока не приду в нижнюю точку диагонали
