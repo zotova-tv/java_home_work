@@ -31,7 +31,7 @@ public class Employee {
     }
 
     public String getFullName() {
-        return fullName;
+        return this.fullName;
     }
 
     public void setFullName(String fullName) {
@@ -39,7 +39,7 @@ public class Employee {
     }
 
     public String getPosition() {
-        return position;
+        return this.position;
     }
 
     public void setPosition(String position) {
@@ -47,7 +47,7 @@ public class Employee {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -55,7 +55,7 @@ public class Employee {
     }
 
     public String getPhone() {
-        return phone;
+        return this.phone;
     }
 
     public void setPhone(String phone) {
@@ -63,7 +63,7 @@ public class Employee {
     }
 
     public double getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public void setSalary(double salary) {
@@ -71,7 +71,7 @@ public class Employee {
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public void setAge(int age) {
