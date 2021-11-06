@@ -15,12 +15,12 @@ public class Test {
 
         plate.printInfo();
 
-        for(Cat cat: cats){
+        for (Cat cat : cats) {
             cat.eat(plate);
 
-            if(cat.isFull()){
+            if (cat.isFull()) {
                 System.out.println(cat.getName() + " наелся... пока...");
-            }else{
+            } else {
                 System.out.println(cat.getName() + " всё еще голоден и не ручается за своё поведение.");
             }
             // Thread.sleep(3000);

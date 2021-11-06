@@ -1,6 +1,5 @@
 package lesson7;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Cat {
@@ -19,14 +18,14 @@ public class Cat {
         int decreaseFoodCount = plate.decreaseFood(this.appetite);
         this.appetite -= decreaseFoodCount;
         if (this.appetite > 0) {
-            if (askForMore(plate)) {
+            if (askForMore()) {
                 plate.addFood(this.appetite);
                 this.eat(plate);
             }
         }
     }
 
-    private boolean askForMore(Plate plate) {
+    private boolean askForMore() {
         System.out.println("Мяу!!! (Перевод: " + this.name + " голоден! Требует срочно добавить в тарелку " + this.appetite + " кусочков.)");
         System.out.println("Добавить? y/n");
         switch (scanner.next()) {
