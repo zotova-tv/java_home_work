@@ -13,7 +13,7 @@ public class Robot implements Participant{
     @Override
     public boolean run(Track track) {
         if(track.getDistance() > this.getMaxRunningDistance()){
-            System.out.println("The robot cannot run such a distance.");
+            System.out.println("The robot cannot run such the distance.");
             return false;
         }else{
             System.out.println("The robot ran the distance.");

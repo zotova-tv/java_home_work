@@ -13,7 +13,7 @@ public class Human implements Participant {
     @Override
     public boolean run(Track track) {
         if(track.getDistance() > this.getMaxRunningDistance()){
-            System.out.println("The human cannot run such a distance.");
+            System.out.println("The human cannot run such the distance.");
             return false;
         }else{
             System.out.println("The human ran the distance.");
