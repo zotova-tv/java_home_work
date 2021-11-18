@@ -8,13 +8,13 @@ public class Box<E extends Fruit> {
     public Box(int size) {
         this.size = size;
         this.data = (E[]) new Fruit[size];
-        currentSize = 0;
+        this.currentSize = 0;
     }
 
     public void add(E fruit){
         if(currentSize < size){
-            data[currentSize] = fruit;
-            currentSize++;
+            this.data[currentSize] = fruit;
+            this.currentSize++;
         }else{
             throw new BoxIsFullException();
         }
@@ -39,7 +39,7 @@ public class Box<E extends Fruit> {
         }
         E fruit = this.data[currentSize - 1];
         this.data[currentSize - 1] = null;
-        currentSize--;
+        this.currentSize--;
         return fruit;
     }
 
@@ -74,14 +74,14 @@ public class Box<E extends Fruit> {
 
     @Override
     public String toString() {
-        String str = "Box {";
+        String str = "Box [";
         for(int i = 0; i < currentSize; i++){
             str += this.get(i).toString();
             if(i != currentSize - 1){
                 str += ", ";
             }
         }
-        str += "}";
+        str += "]";
         return str;
     }
 

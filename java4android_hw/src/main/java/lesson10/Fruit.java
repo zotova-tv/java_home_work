@@ -11,13 +11,13 @@ public abstract class Fruit {
     }
 
     public float getWeight(){
-        return weight;
+        return this.weight;
     }
 
     @Override
     public String toString() {
         return String.format("%s{" +
-                "weight=" + weight +
+                "weight=" + this.weight +
                 '}', fruitName);
     }
 }
