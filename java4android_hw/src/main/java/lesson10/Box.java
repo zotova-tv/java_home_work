@@ -44,12 +44,12 @@ public class Box<E extends Fruit> {
     }
 
     public boolean isEmpty(){
-        return currentSize == 0;
+        return this.currentSize == 0;
     }
 
     public float getWeight(){
         float weight = 0.0f;
-        for(int i = 0; i < currentSize; i++){
+        for(int i = 0; i < this.currentSize; i++){
             weight += this.get(i).getWeight();
         }
         return weight;
@@ -69,15 +69,15 @@ public class Box<E extends Fruit> {
     }
 
     public int getCurrentSize() {
-        return currentSize;
+        return this.currentSize;
     }
 
     @Override
     public String toString() {
         String str = "Box [";
-        for(int i = 0; i < currentSize; i++){
+        for(int i = 0; i < this.currentSize; i++){
             str += this.get(i).toString();
-            if(i != currentSize - 1){
+            if(i != this.currentSize - 1){
                 str += ", ";
             }
         }
