@@ -1,9 +1,15 @@
 package lesson3;
 
+import java.io.IOException;
 import java.util.Arrays;
+import java.util.logging.*;
 
 public class HomeWorkApp {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
+
+        // logger.getHandlers()[0].setLevel(Level.ALL);
+
         // task 1
         replace0With1(new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0});
 
@@ -35,6 +41,7 @@ public class HomeWorkApp {
         // task 8
         int[] arr4 = {1, 2, 3};
         shiftArrayElementsByNPlaces(arr4, -1);
+        System.out.println("All methods worked");
     }
 
     // task 1
@@ -132,8 +139,22 @@ public class HomeWorkApp {
     }
 
     // task 7
-    private static boolean sumOfLeftSideIsEqualSumOfRightSide(int[] arr) {
+    public static boolean sumOfLeftSideIsEqualSumOfRightSide(int[] arr) {
+
+        Logger logger = getLogger("task7");
+        if( logger.getHandlers().length ==  0 ){
+            try {
+                Handler handler = getHandler("lesson3Task7.log");
+                logger.addHandler(handler);
+            }catch (IOException e){
+                logger.warning(e.getMessage());
+            }
+        }
+
+        logger.info("В функцию sumOfLeftSideIsEqualSumOfRightSide передан массив " + Arrays.toString(arr));
+
         if (arr.length < 2) {
+            logger.warning("Передан массив с менее чем двумя числами");
             return false;
         }
         for (int i = 1; i < arr.length; i++) {
@@ -147,14 +168,28 @@ public class HomeWorkApp {
                 }
             }
             if (leftSum == rightSum) {
+                logger.fine("Массив может быть поделен на два миссива с одинаковыми суммами. Сумма каждого массива будет равно " + leftSum);
                 return true;
             }
         }
+        logger.info("Массив не может быть поделен на два миссива с одинаковыми суммами");
         return false;
     }
 
     // task 8
-    private static void shiftArrayElementsByNPlaces(int[] arr, int allShiftsCount) {
+    public static void shiftArrayElementsByNPlaces(int[] arr, int allShiftsCount) {
+
+        Logger logger = getLogger("task8");
+        if( logger.getHandlers().length ==  0 ){
+            try {
+                Handler handler = getHandler("lesson3Task8.log");
+                logger.addHandler(handler);
+            }catch (IOException e){
+                logger.warning(e.getMessage());
+            }
+        }
+
+        logger.info("В метод shiftArrayElementsByNPlaces переданы " + Arrays.toString(arr) + ", который нужно сдивинуть " + allShiftsCount + " раз");
         int shiftsCount = allShiftsCount % arr.length;
         if (shiftsCount > 0) {
             int prevElem = arr[arr.length - 1];
@@ -176,6 +211,25 @@ public class HomeWorkApp {
                 }
             }
         }
-        System.out.println(Arrays.toString(arr));
+        logger.info("Результат смещения массива " + Arrays.toString(arr));
+        // System.out.println(Arrays.toString(arr));
+    }
+
+    private static Logger getLogger(String loggerName){
+        if(loggerName == ""){
+            loggerName = "defaultLogger";
+        }
+        Logger logger = Logger.getLogger(loggerName);
+        logger.setLevel(Level.ALL);
+        return logger;
+    }
+
+    private static Handler getHandler(String filename) throws IOException {
+        if( filename == "" ){
+            filename = "defaultLog.log";
+        }
+        Handler handler = new FileHandler("src/main/resources/logs/" + filename);
+        handler.setFormatter(new SimpleFormatter());
+        return handler;
     }
 }
