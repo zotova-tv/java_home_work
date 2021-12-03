@@ -1,24 +1,24 @@
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: В функцию sumOfLeftSideIsEqualSumOfRightSide передан массив [1, 1, 1, 2, 3, 2]
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 FINE: Массив может быть поделен на два миссива с одинаковыми суммами. Сумма каждого массива будет равно 5
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: В функцию sumOfLeftSideIsEqualSumOfRightSide передан массив [1, 2, 3, 4, 2]
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 FINE: Массив может быть поделен на два миссива с одинаковыми суммами. Сумма каждого массива будет равно 6
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: В функцию sumOfLeftSideIsEqualSumOfRightSide передан массив [1, 2, 4, 5, 7]
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: Массив не может быть поделен на два миссива с одинаковыми суммами
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: В функцию sumOfLeftSideIsEqualSumOfRightSide передан массив [1, 0, 3, 4, 5, 6]
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: Массив не может быть поделен на два миссива с одинаковыми суммами
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: В функцию sumOfLeftSideIsEqualSumOfRightSide передан массив [2147483647, 1, 2, 3, -2147483648]
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: Массив не может быть поделен на два миссива с одинаковыми суммами
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 INFO: В функцию sumOfLeftSideIsEqualSumOfRightSide передан массив []
-дек. 03, 2021 10:07:15 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
+дек. 03, 2021 10:04:30 PM lesson3.HomeWorkApp sumOfLeftSideIsEqualSumOfRightSide
 WARNING: Передан массив с менее чем двумя числами

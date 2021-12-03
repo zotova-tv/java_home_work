@@ -6,7 +6,7 @@ import java.util.logging.*;
 
 public class HomeWorkApp {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         // task 1
         replace0With1(new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0});
@@ -39,7 +39,6 @@ public class HomeWorkApp {
         // task 8
         int[] arr4 = {1, 2, 3};
         shiftArrayElementsByNPlaces(arr4, -1);
-        System.out.println("All methods worked");
     }
 
     // task 1
@@ -167,8 +166,6 @@ public class HomeWorkApp {
             }
             if (leftSum == rightSum) {
                 logger.log(Level.FINE, "Массив может быть поделен на два миссива с одинаковыми суммами. Сумма каждого массива будет равно " + leftSum);
-                System.out.println("FINE");
-                System.out.println(logger.getLevel());
                 return true;
             }
         }
@@ -184,12 +181,10 @@ public class HomeWorkApp {
             try {
                 Handler handler = getHandler("lesson3Task8.log");
                 logger.addHandler(handler);
-                System.out.println("handler level" + handler.getLevel());
             }catch (IOException e){
                 logger.warning(e.getMessage());
             }
         }
-        System.out.println("logger level" + logger.getLevel());
         logger.info("В метод shiftArrayElementsByNPlaces переданы " + Arrays.toString(arr) + ", который нужно сдивинуть " + allShiftsCount + " раз");
         int shiftsCount = allShiftsCount % arr.length;
         if (shiftsCount > 0) {
