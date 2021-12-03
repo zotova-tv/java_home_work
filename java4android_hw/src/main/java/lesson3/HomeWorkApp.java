@@ -8,8 +8,6 @@ public class HomeWorkApp {
 
     public static void main(String[] args) throws IOException {
 
-        // logger.getHandlers()[0].setLevel(Level.ALL);
-
         // task 1
         replace0With1(new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0});
 
@@ -168,7 +166,9 @@ public class HomeWorkApp {
                 }
             }
             if (leftSum == rightSum) {
-                logger.fine("Массив может быть поделен на два миссива с одинаковыми суммами. Сумма каждого массива будет равно " + leftSum);
+                logger.log(Level.FINE, "Массив может быть поделен на два миссива с одинаковыми суммами. Сумма каждого массива будет равно " + leftSum);
+                System.out.println("FINE");
+                System.out.println(logger.getLevel());
                 return true;
             }
         }
@@ -184,11 +184,12 @@ public class HomeWorkApp {
             try {
                 Handler handler = getHandler("lesson3Task8.log");
                 logger.addHandler(handler);
+                System.out.println("handler level" + handler.getLevel());
             }catch (IOException e){
                 logger.warning(e.getMessage());
             }
         }
-
+        System.out.println("logger level" + logger.getLevel());
         logger.info("В метод shiftArrayElementsByNPlaces переданы " + Arrays.toString(arr) + ", который нужно сдивинуть " + allShiftsCount + " раз");
         int shiftsCount = allShiftsCount % arr.length;
         if (shiftsCount > 0) {
@@ -230,6 +231,7 @@ public class HomeWorkApp {
         }
         Handler handler = new FileHandler("src/main/resources/logs/" + filename);
         handler.setFormatter(new SimpleFormatter());
+        handler.setLevel(Level.ALL);
         return handler;
     }
 }
